@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "switchgame"
+version = "0.1.0"
+description = ""
+authors = ["chebupelka <119750562+chebupelka8@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pygame-ce = "^2.4.1"
+keyboard = "^0.13.5"
+pillow = "^10.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
