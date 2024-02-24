@@ -2,8 +2,6 @@ from ..scripts.collision import Collider
 from ..scripts.math import Vec2
 from .rectangle_shape import RectangleShape
 
-import pygame
-
 
 class CollisionRectangle(RectangleShape):
     def __init__(self, position: Vec2, width: int, height: int) -> None:

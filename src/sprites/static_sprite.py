@@ -2,9 +2,9 @@ import pygame
 
 from typing import Optional
 
-from ..scripts.shape import CollisionRectangle
+from ..shapes import CollisionRectangle
 from ..scripts.math import Vec2
-from ..scripts.image import Image
+from ..image_types import Image
 from ..config import AlignmentFlag
 
 
