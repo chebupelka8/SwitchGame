@@ -1,4 +1,4 @@
-from ..scripts.collision import Collider
+import SwitchGame as sw
 from ..scripts.math import Vec2
 from .rectangle_shape import RectangleShape
 
@@ -43,7 +43,7 @@ class CollisionRectangle(RectangleShape):
         self.rectangle.x += self.movement.x
 
         if self.__collide_groups is not None:
-            collisions = Collider.group_collider(self, *self.__collide_groups)
+            collisions = sw.Collider.group_collider(self, *self.__collide_groups)
 
             for sprite in collisions:
                 if self.movement.x > 0:
@@ -74,7 +74,7 @@ class CollisionRectangle(RectangleShape):
         self.rectangle.y += self.movement.y
 
         if self.__collide_groups is not None:
-            collisions = Collider.group_collider(self, *self.__collide_groups)
+            collisions = sw.Collider.group_collider(self, *self.__collide_groups)
 
             for sprite in collisions:
                 if self.movement.y > 0:
