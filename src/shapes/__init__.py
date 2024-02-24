@@ -1,0 +1,2 @@
+from .rectangle_shape import RectangleShape
+from .collision_rectangle_shape import CollisionRectangle
