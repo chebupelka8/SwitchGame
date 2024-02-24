@@ -1,7 +1,5 @@
-# from .sprites import *
 from typing import Any
 
-# import SwitchGame as sw
 from .shape import RectangleShape, CollisionRectangle
 from .sprites import StaticSprite, AnimatedSprite
 

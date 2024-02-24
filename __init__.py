@@ -23,4 +23,6 @@ from .scripts.collision import *
 
 from .scripts.loop import *
 
+from .config import *
+
 print("Welcome! (SwitchGame: v0.1)")

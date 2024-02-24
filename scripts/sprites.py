@@ -1,13 +1,11 @@
-# from .image import Image, Animation
-# from .shape import *
-# from .coordinated import Coordinated
-
 import pygame
 
-# import SwitchGame as sw
+from typing import Optional
+
 from .shape import CollisionRectangle
 from .math import Vec2
 from .image import Image, Animation
+from ..config import AlignmentFlag
 
 
 class StaticSprite(CollisionRectangle):
@@ -16,12 +14,14 @@ class StaticSprite(CollisionRectangle):
 
         self.__image = image
     
-    def draw(self, __display: pygame.Surface) -> None:
+    def draw(self, __display: pygame.Surface, image: Optional[Image] = None, alignment_flag = AlignmentFlag.TOPLEFT) -> None:
         self.update()
+
+        self.rectangle = alignment_flag(self.rectangle, image)
         
-        __display.blit(self.__image.image, self.rectangle)
-        # pygame.draw.rect(__display, "red", self.rectangle, 1)
-    
+        if image is None: __display.blit(self.__image.image, self.rectangle)
+        else: __display.blit(image.image, self.rectangle)
+
     @property
     def image(self) -> Image:
         return self.__image
@@ -55,7 +55,6 @@ class AnimatedSprite(CollisionRectangle):
         self.update()
 
         __display.blit(self.__animation[int(self.__frame)].image, self.rectangle)
-        # pygame.draw.rect(__display, "red", self.rectangle, 1)
     
     def animating(self, __speed: int | float) -> None:
         if not self.__is_freezed:

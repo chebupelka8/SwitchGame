@@ -1,11 +1,4 @@
-# import pygame
-# from .math import Vec2, PrivateVec2
-# from .collision import Collider
-# from typing import TYPE_CHECKING
-
 import SwitchGame as sw
-
-# from .collision import Collider
 from .math import Vec2, PrivateVec2
 
 import pygame
@@ -28,6 +21,10 @@ class RectangleShape:
     @property
     def rectangle(self) -> pygame.Rect:
         return self.__rectangle
+
+    @rectangle.setter
+    def rectangle(self, __rectangle: pygame.Rect) -> None:
+        self.__rectangle = __rectangle
     
     @property
     def center(self) -> PrivateVec2:
@@ -37,15 +34,15 @@ class RectangleShape:
     def position(self) -> PrivateVec2:
         return PrivateVec2(self.__rectangle.x, self.__rectangle.y)
 
-    def draw_rect(self, __display: pygame.Surface, __color: str | tuple = "#ffffff", __width: int = 0) -> None:
+    def draw_rect(self, __display: pygame.Surface, __color: str | tuple = "#ffffff", __width: int = 1) -> None:
         pygame.draw.rect(__display, __color, self.__rectangle, __width)
 
 
 class CollisionRectangle(RectangleShape):
-    def __init__(self, position: Vec2, width: int, height: int, *, movement: Vec2 = Vec2(0, 0)) -> None:
+    def __init__(self, position: Vec2, width: int, height: int) -> None:
         super().__init__(position, width, height)
 
-        self.__movement = movement
+        self.__movement = Vec2(0, 0)
         self.__collide_groups = None
         self.__object_groups = None
         self.__collide_side = {

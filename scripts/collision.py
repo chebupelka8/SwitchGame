@@ -1,7 +1,3 @@
-# import pygame
-# from .group import SpriteGroup, RectangleGroup
-# import SwitchGame as sw
-
 from .group import SpriteGroup, RectangleGroup
 from .shape import CollisionRectangle
 from .math import Vec2

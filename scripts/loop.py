@@ -1,11 +1,3 @@
-# import pygame, sys
-# from pygame.locals import *
-# from .math import Vec2
-# from .image import Image
-
-# from . import Image, Vec2
-# import SwitchGame as sw
-
 from .math import Vec2
 from .image import Image
 
