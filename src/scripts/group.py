@@ -1,7 +1,7 @@
 from typing import Any
 
-from .shape import RectangleShape, CollisionRectangle
-from .sprites import StaticSprite, AnimatedSprite
+from ..shapes import RectangleShape, CollisionRectangle
+from ..sprites import StaticSprite, AnimatedSprite
 
 import pygame
 

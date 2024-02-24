@@ -1,5 +1,5 @@
 from .math import Vec2
-from .image import Image
+from ..image_types import Image
 
 import pygame
 from pygame.locals import *

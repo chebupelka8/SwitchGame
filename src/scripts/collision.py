@@ -1,5 +1,5 @@
 from .group import SpriteGroup, RectangleGroup
-from .shape import CollisionRectangle
+from ..shapes import CollisionRectangle
 from .math import Vec2
 
 import pygame
