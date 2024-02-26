@@ -160,6 +160,20 @@ files = [
 ]
 
 [[package]]
+name = "pygame-gui"
+version = "0.6.9"
+description = "A GUI module for pygame Community Edition"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pygame_gui-0.6.9-py3-none-any.whl", hash = "sha256:562b5372052456b9517530db44b050f8cffc528662b8a29b6e74873a0c0f5e02"},
+]
+
+[package.dependencies]
+pygame-ce = ">=2.1.4"
+python-i18n = ">=0.3.9"
+
+[[package]]
 name = "pyobjc"
 version = "10.1"
 description = "Python<->ObjC Interoperability Module"
@@ -2897,7 +2911,21 @@ files = [
 pyobjc-core = ">=10.1"
 pyobjc-framework-Cocoa = ">=10.1"
 
+[[package]]
+name = "python-i18n"
+version = "0.3.9"
+description = "Translation library for Python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "python-i18n-0.3.9.tar.gz", hash = "sha256:df97f3d2364bf3a7ebfbd6cbefe8e45483468e52a9e30b909c6078f5f471e4e8"},
+    {file = "python_i18n-0.3.9-py3-none-any.whl", hash = "sha256:bda5b8d889ebd51973e22e53746417bd32783c9bd6780fd27cadbb733915651d"},
+]
+
+[package.extras]
+yaml = ["pyyaml (>=3.10)"]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "d25a640be2b639b5e330ca9fd9917793d2ed49b7692f91047c624925a6d09777"
+content-hash = "8fb524099c0623191f2f8dedfbd760e536be4a2d5aae733c5cc3c54512f2e7ea"

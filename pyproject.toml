@@ -11,6 +11,7 @@ python = "^3.12"
 pygame-ce = "^2.4.1"
 keyboard = "^0.13.5"
 pillow = "^10.2.0"
+pygame-gui = "^0.6.9"
 
 
 [build-system]
