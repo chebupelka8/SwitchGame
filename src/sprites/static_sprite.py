@@ -18,11 +18,11 @@ class StaticSprite(CollisionRectangle):
              alignment_flag=AlignmentFlag.TOPLEFT) -> None:
         self.update()
 
-        self.rectangle = alignment_flag(self.rectangle, image)
-
         if image is None:
+            self.rectangle = alignment_flag(self.rectangle, self.__image)
             __display.blit(self.__image.image, self.rectangle)
         else:
+            self.rectangle = alignment_flag(self.rectangle, image)
             __display.blit(image.image, self.rectangle)
 
     @property
